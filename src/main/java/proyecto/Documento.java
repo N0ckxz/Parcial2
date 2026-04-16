@@ -1,4 +1,4 @@
-package proyecto; //Comentario para el commit
+package proyecto; //Comentario para el commit2
 
 import com.murcia.utils.*; //comentario para el commit de prueba
 import java.io.*;
