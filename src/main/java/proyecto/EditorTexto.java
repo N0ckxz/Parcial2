@@ -117,4 +117,8 @@ public class EditorTexto {
         System.out.println("Acciones rehacibles: " + pilaRehacer.size());
         System.out.println("----------------------------------\n");
     }
+
+    public void buscarPalabra(String palabra) {      
+        documentoActual.buscar(palabra); //Poco ideal, realmente me podria ahorrar este metodo aqui, pero es lo que salio en el momento
+    }
 }

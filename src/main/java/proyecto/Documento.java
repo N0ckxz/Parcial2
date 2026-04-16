@@ -67,9 +67,9 @@ public class Documento{ //Comentario de prueba en casa
                 writer.write(lineasDeTexto.get(i));
                 writer.newLine();
             }
-            System.out.println("✓ Documento guardado en: " + nombreArchivo);
+            System.out.println("Documento guardado en: " + nombreArchivo);
         } catch (IOException e) {
-            System.out.println("✗ Error al guardar el archivo: " + e.getMessage());
+            System.out.println("Error al guardar el archivo: " + e.getMessage());
         }
     }
 
@@ -84,11 +84,11 @@ public class Documento{ //Comentario de prueba en casa
             while ((linea = reader.readLine()) != null) {
                 lineasDeTexto.addLast(linea);
             }
-            System.out.println("✓ Documento cargado desde: " + nombreArchivo);
+            System.out.println("Documento cargado desde: " + nombreArchivo);
         } catch (FileNotFoundException e) {
-            System.out.println("✗ Archivo no encontrado: " + nombreArchivo);
+            System.out.println("Archivo no encontrado: " + nombreArchivo);
         } catch (IOException e) {
-            System.out.println("✗ Error al cargar el archivo: " + e.getMessage());
+            System.out.println("Error al cargar el archivo: " + e.getMessage());
         }
     }
 
@@ -98,5 +98,18 @@ public class Documento{ //Comentario de prueba en casa
 
     public void limpiar() {
         lineasDeTexto.clear();
+    }
+
+    public void buscar(String palabra) {
+        boolean encontrado = false;
+        for(int x = 0; x < lineasDeTexto.size(); x++) { // Ciclo que pasa por linea y busca entre palabra
+            if (lineasDeTexto.get(x).toLowerCase().contains(palabra.toLowerCase())) {
+                System.out.println("Línea " + (x + 1) + ": " + lineasDeTexto.get(x));
+                encontrado = true;
+            }
+        }
+        if (!encontrado) {
+            System.out.println("Texto '" + palabra + "' no encontrado.");
+        }
     }
 }

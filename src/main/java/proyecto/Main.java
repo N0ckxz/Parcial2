@@ -19,7 +19,8 @@ public class Main {
             "6. Guardar archivo",
             "7. Cargar archivo",
             "8. Estadísticas",
-            "9. Salir"
+            "9. Buscar palabra",
+            "E. Salir"
         };
 
         // Menu
@@ -69,8 +70,14 @@ public class Main {
                 case '8':
                     editor.mostrarEstadisticas();
                     break;
+                case '9':
+                    Input.nextLine("");
+                    String palabra = Input.nextLine("Palabra a buscar:");
+                    editor.buscarPalabra(palabra);
+                    break;
+                
             }
-        } while (opcion != '9');
+        } while (opcion != 'E');
         
         System.out.println("Editor cerrado.");
     }

@@ -1,1 +1,31 @@
-Texto para el archivo
+Actividades:
+
+Pregunta 1:
+- Referir al menos una clase nueva, diferente a las referidas en la libreria "mi libreria.jar", 
+  que haya incluido en su proyecto, y explique de manera general sus nuevos atributos y/o metodos.
+
+   -R: Cree la clase PilaEnlazada, que hereda a ListaEnlazada, ya que faltaba en la libreria del profesor, 
+       que realmente lo que hace es implementar la estructura de lista LIFO con los metodos apilar y desapilar, 
+       ademas le hice @Override al metodo de clone de ListaEnlazada para enfocarlo a el manejo de pilas. 
+
+       A continuación una descripción de los métodos creados:
+	-apilar(T e): Agrega un elemento al inicio (LIFO), donde e es un atributo generico para facilitar el uso del metodo.
+	-desapilar(): Remueve y retorna el ultimo elemento.
+	-clone(): Crea una copia específica que itera por los nodos para duplicar la estructura.
+ 
+	Fuente: PilaEnlazada.java
+
+=============================================================================================================================
+
+Pregunta 2:
+- Si incluyo un metodo de busqueda explique su objetivo, valor de retorno, y parametros (cada uno de ellos).
+  Refiera las fuentes (donde se define y donde se llama). En caso de no tenerlo, agregarlo.
+
+   -R: Me tocó crear un método de busqueda, que realmente lo que hace es que se le da un parametro tipo String,
+	y va pasando de linea a linea, escaneando con la funcion contains() de java directamente cada cadena 
+	de texto contenida dentro de lineasDeTexto, una buena implementacion fue aplicar el toLowerCase para que 
+	toda la cadena de texto tenga el mismo ¨formato¨, y asi facilitar la busqueda de la palabra, sin 
+	importar si esta en mayusculas o minusculas (aunque esto puede ser un problema en el futuro porque se 
+	puede necesitar buscar palabras con mayusculas y minusculas que las diferencien). 
+
+	Fuente: Documento.java, lineas 103;114.
